@@ -19,7 +19,7 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: false
 
 footer:
   # Specify the date when the site was setup.
@@ -33,13 +33,13 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false #Hexo链接显示
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false #底部主题名字显示
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: true #主题版本显示
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -71,14 +71,15 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
-  archives: /archives/ || archive
+  home: / || home #主页
+  tags: /tags/ || tags #标签
+  categories: /categories/ || th #分类
+  archives: /archives/ || archive #归档
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
+  about: /about/ || user #关于我
   #commonweal: /404/ || heartbeat
+  
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -105,8 +106,8 @@ scheme: Muse
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
+social: #侧栏链接
+  GitHub: https://github.com/zzx18023 || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -132,7 +133,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /images/avatar.gif #头像
 
 # Table Of Contents in the Sidebar
 toc:
@@ -195,7 +196,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
@@ -332,7 +333,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: '8ec9f1597253d39b7b3258fbede6b44e'
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -346,11 +347,11 @@ disqus:
 # Hypercomments
 #hypercomments_id:
 
-# changyan
+# changyan 畅言
 changyan:
-  enable: false
-  appid:
-  appkey:
+  enable: true
+  appid: 'cyteMbpoD'
+  appkey: 'prod_d861fded273b8096ab0a72c242de26f7'
 
 
 # Valine.
@@ -366,7 +367,7 @@ valine:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
+#youyan_uid: 2141421
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -376,16 +377,16 @@ valine:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+#baidushare: #百度分享
+  #type: button #位置
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
 #jiathis:
-  ##uid: Get this uid from http://www.jiathis.com/
-#add_this_id:
+  ##uid: 2141421
+#add_this_id: 
 
 # Share
 #duoshuo_share: true
@@ -462,30 +463,30 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  app_id: 2LinPzRwe7A8inJya2sFMQFE-gzGzoHsz
+  app_key: FND3MPCvk443BKzcFThh3DAP
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  site_uv_header: <i class="fa fa-user"></i>本站访客
+  site_uv_footer: 人
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  site_pv_header: <i class="fa fa-eye"></i>本站访问
+  site_pv_footer: 次
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
+  page_pv_header: <i class="fa fa-eye"></i>
+  page_pv_footer: 
 
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 63775618
 
 # Tencent MTA ID
 # tencent_mta:
@@ -588,6 +589,7 @@ motion:
     post_header: slideDownIn
     post_body: slideDownIn
     coll_header: slideLeftIn
+    post: slideDownIn
 
 # Fancybox
 fancybox: true
@@ -613,7 +615,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false

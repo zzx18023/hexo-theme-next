@@ -288,7 +288,8 @@ $(document).ready(function () {
     },
 
     postList: function (integrator) {
-      //var $post = $('.post');
+      var $post = $('.post');
+			var $postTransition = CONFIG.motion.transition.post;
       var $postBlock = $('.post-block');
       var $postBlockTransition = CONFIG.motion.transition.post_block;
       var $postHeader = $('.post-header');
@@ -314,7 +315,9 @@ $(document).ready(function () {
           integrator.next();
         };
 
-        //$post.velocity('transition.slideDownIn', postMotionOptions);
+        if(CONFIG.motion.transition.post) {
+					$post.velocity('transition.' + $postTransition, postMotionOptions);
+				}
         if (CONFIG.motion.transition.post_block) {
           $postBlock.velocity('transition.' + $postBlockTransition, postMotionOptions);
         }
